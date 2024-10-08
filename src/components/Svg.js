@@ -1,13 +1,6 @@
 export function SettingsSVG() {
   return (
-    <svg
-      fill="#fff"
-      width="50px"
-      height="50px"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      id="settings-alt"
-    >
+    <svg fill="#fff" width="50px" height="50px" viewBox="0 0 24 24">
       <path d="M21.9,10.59,20,8.69V6a2,2,0,0,0-2-2H15.31l-1.9-1.9a2,2,0,0,0-2.82,0L8.69,4H6A2,2,0,0,0,4,6V8.69l-1.9,1.9a2,2,0,0,0,0,2.82L4,15.31V18a2,2,0,0,0,2,2H8.69l1.9,1.9a2,2,0,0,0,2.82,0l1.9-1.9H18a2,2,0,0,0,2-2V15.31l1.9-1.9A2,2,0,0,0,21.9,10.59ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16Z"></path>
     </svg>
   );
@@ -16,8 +9,6 @@ export function SettingsSVG() {
 export function PeopleSVG() {
   return (
     <svg width="50px" height="50px" viewBox="0 0 28 28" version="1.1">
-      <title>ic_fluent_people_28_filled</title>
-      <desc>Created with Sketch.</desc>
       <g
         id="🔍-Product-Icons"
         stroke="none"
@@ -38,14 +29,7 @@ export function PeopleSVG() {
 
 export function RefreshSVG() {
   return (
-    <svg
-      fill="#fff"
-      height="50px"
-      width="50px"
-      version="1.1"
-      id="Layer_1"
-      viewBox="0 0 512 512"
-    >
+    <svg fill="#fff" height="50px" width="50px" viewBox="0 0 512 512">
       <g>
         <g>
           <g>
@@ -85,13 +69,7 @@ export function RefreshSVG() {
 
 export function PlusSVG() {
   return (
-    <svg
-      width="40px"
-      height="40px"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none">
       <path
         d="M6 12H18M12 6V18"
         stroke="#000"
@@ -105,13 +83,7 @@ export function PlusSVG() {
 
 export function MinusSVG() {
   return (
-    <svg
-      width="40px"
-      height="40px"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none">
       <path
         d="M6 12L18 12"
         stroke="#000000"

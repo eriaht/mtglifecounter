@@ -38,8 +38,8 @@ export default function App() {
   }
 
   function handleNumPlayers(numPlayers) {
-    console.log(numPlayers);
     setNumPlayers(numPlayers);
+    handlePlayerMenu();
   }
 
   function handlePlayerLifeReset() {
