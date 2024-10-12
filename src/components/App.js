@@ -18,6 +18,7 @@ export default function App() {
     Array.from({ length: numPlayers }, () => playerLife)
   );
   const [playersMenuIsOpen, setPlayersMenuIsOpen] = useState(false);
+  const [settingsMenuIsOpen, setSettingsMenuIsOpen] = useState(false);
 
   // useEffect initalize numPlayers and playersLife from localStorage API
 
@@ -50,8 +51,13 @@ export default function App() {
     setPlayersMenuIsOpen((playersMenuIsOpen) => !playersMenuIsOpen);
   }
 
+  function handleSettingsMenu() {
+    setSettingsMenuIsOpen((settingsMenuIsOpen) => !settingsMenuIsOpen);
+  }
+
   return (
     <main className={`app ${PlayerLayouts[numPlayers - 1]}`}>
+      {}
       {Array.from({ length: numPlayers }).map((_, i) => (
         <Player
           key={`player${i + 1}`}
@@ -71,9 +77,9 @@ export default function App() {
           <Button className="refresh" onClick={handlePlayerLifeReset}>
             <RefreshSVG />
           </Button>
-          {/* <Button className="settings">
-          <SettingsSVG />
-        </Button> */}
+          <Button className="settings" onClick={handleSettingsMenu}>
+            <SettingsSVG />
+          </Button>
           <Button className="people" onClick={handlePlayerMenu}>
             <PeopleSVG />
           </Button>

@@ -19,6 +19,7 @@
   height: 100vh;
   width: 100vw;
   display: grid;
+  position: relative;
 
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -92,9 +93,14 @@ button {
 .overlay {
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
 }
 
 .settings-modal {
+  padding: 15px;
 }
 
 .player {
@@ -137,6 +143,11 @@ button {
   background-color: rgba(255, 255, 255, 0.35);
 }
 
+.player button > svg {
+  height: 3rem;
+  width: 3rem;
+}
+
 .player p {
   position: absolute;
   top: 50%;
@@ -164,7 +175,155 @@ button {
 }
 
 /* Phones vertical view */
-@media only screen and (min-width: 300px) and (min-height: 600px) and (orientation: portrait) {
+@media only screen and (min-width: 300px) and (min-height: 300px) and (orientation: portrait) {
+  .app {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 50px 1fr;
+  }
+
+  /* Menu */
+
+  .menu {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column: span 2;
+
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .player-menu {
+    flex-direction: row;
+  }
+
+  /* One player */
+
+  .one {
+    grid-template-rows: 2fr 1fr 1fr 50px 2fr;
+  }
+
+  .one .player1 {
+    grid-column: span 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .one .menu {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .one .player {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .one .player .add {
+    grid-column-start: 2;
+    grid-row: span 2;
+  }
+
+  .one .player .subtract {
+    grid-column-start: 1;
+    grid-row: span 2;
+  }
+
+  .one .player p {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  /* Two players */
+
+  .two .player1 {
+    grid-column: span 2;
+  }
+
+  .two .player2 {
+    grid-column: span 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .two .player {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .two .player1 .add {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .two .player1 p {
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
+
+  .two .player2 p {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  /* Three players */
+
+  .three {
+    grid-template-rows: 1.8fr 50px 1fr;
+  }
+
+  .three .player3 {
+    grid-column: span 2;
+  }
+
+  .three .player2 .add {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .three .player3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .three .player3 p {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .three .player1 svg,
+  .three .player2 svg {
+    transform: rotate(90deg);
+  }
+
+  .three .player1 p {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
+
+  .three .player2 p {
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  }
+
+  /* Four players */
+
+  .four .player1 p,
+  .four .player3 p {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
+
+  .four .player2 p,
+  .four .player4 p {
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  }
+
+  .four .player2 .add,
+  .four .player4 .add {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .four .player svg {
+    transform: rotate(90deg);
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 580px) and (min-height: 300px) and (max-height: 580px) {
   .app {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 50px 1fr;
@@ -583,4 +742,10 @@ button {
   .four .player2 {
     transform: rotate(180deg);
   } */
+}
+
+@media only screen and (orientation: landscape) {
+  .two .settings-modal {
+    transform: rotate(-90deg);
+  }
 }
