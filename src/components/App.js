@@ -77,9 +77,9 @@ export default function App() {
           <Button className="refresh" onClick={handlePlayerLifeReset}>
             <RefreshSVG />
           </Button>
-          <Button className="settings" onClick={handleSettingsMenu}>
+          {/* <Button className="settings" onClick={handleSettingsMenu}>
             <SettingsSVG />
-          </Button>
+          </Button> */}
           <Button className="people" onClick={handlePlayerMenu}>
             <PeopleSVG />
           </Button>
