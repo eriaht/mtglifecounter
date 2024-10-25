@@ -47,6 +47,10 @@ button {
   cursor: pointer;
 }
 
+.player-menu {
+  display: flex;
+}
+
 .refresh,
 .people,
 .settings {

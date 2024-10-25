@@ -1,3 +1,3 @@
-export default function Menu({ children }) {
-  return <div className={`menu`}>{children}</div>;
+export default function Menu({ children, className }) {
+  return <div className={`menu ${className ? className : ""}`}>{children}</div>;
 }
